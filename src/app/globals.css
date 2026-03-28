@@ -1,26 +1,89 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-navy: #1E2761;
+  --color-navy-light: #2A3575;
+  --color-navy-dark: #151D4A;
+  --color-teal: #0D7377;
+  --color-teal-light: #10918A;
+  --color-teal-dark: #095B5E;
+  --color-gold: #D4A843;
+  --color-slate: #94A3B8;
+  --color-green-map: #22C55E;
+  --color-amber-map: #F59E0B;
+  --color-gray-map: #4B5563;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-navy);
+  color: #f1f5f9;
+  font-family: var(--font-sans, system-ui, sans-serif);
+}
+
+.section-snap {
+  scroll-snap-align: start;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-navy-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-teal);
+  border-radius: 2px;
+}
+
+/* Print styles */
+@media print {
+  html {
+    scroll-snap-type: none;
+  }
+  .section-snap {
+    scroll-snap-align: none;
+    min-height: auto;
+    page-break-after: always;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
+
+/* Slider styling */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  background: #2A3575;
+  border-radius: 3px;
+  outline: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #0D7377;
+  cursor: pointer;
+  border: 2px solid #10918A;
+}
+input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #0D7377;
+  cursor: pointer;
+  border: 2px solid #10918A;
 }
