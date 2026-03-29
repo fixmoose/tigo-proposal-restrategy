@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "EU Distribution Strategy — Tigo Energy",
-  description: "Strategic proposal for Tigo Energy EU distribution restructuring",
+  title: "Tigo Restrategizing 2026",
+  description: "Strategic proposal for Tigo Energy — distribution, platform, and growth",
 };
 
 export default function RootLayout({

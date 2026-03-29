@@ -30,9 +30,9 @@ export default function TitleSlide() {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.15 }}
         >
-          EU Distribution
+          Tigo
           <br />
-          <span className="text-teal">Strategy</span>
+          <span className="text-teal">Restrategizing</span>
         </motion.h1>
 
         <motion.p
@@ -42,7 +42,7 @@ export default function TitleSlide() {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          Tigo Energy · 2026
+          Distribution · Platform · Growth — 2026
         </motion.p>
 
         <motion.div
