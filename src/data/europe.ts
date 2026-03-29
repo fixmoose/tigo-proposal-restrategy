@@ -105,6 +105,7 @@ export const sections: SectionInfo[] = [
   { name: "Title", pillar: "intro" },
   { name: "Tigo Today", pillar: "intro" },
   { name: "The Problem", pillar: "intro" },
+  { name: "Italy Hub", pillar: "pillar1" },
   { name: "The Solution", pillar: "pillar1" },
   { name: "Margin Calculator", pillar: "pillar1" },
   { name: "Qualification", pillar: "pillar1" },

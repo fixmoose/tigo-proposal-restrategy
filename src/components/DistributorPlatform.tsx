@@ -49,7 +49,7 @@ const features = [
 
 export default function DistributorPlatform() {
   return (
-    <section id="section-9" className="section-snap flex items-center justify-center px-8 py-12">
+    <section id="section-10" className="section-snap flex items-center justify-center px-8 py-12">
       <div className="max-w-6xl w-full">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

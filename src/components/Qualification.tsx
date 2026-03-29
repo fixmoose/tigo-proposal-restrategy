@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function Qualification() {
   return (
-    <section id="section-5" className="section-snap flex items-center justify-center px-8">
+    <section id="section-6" className="section-snap flex items-center justify-center px-8">
       <div className="max-w-6xl w-full">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

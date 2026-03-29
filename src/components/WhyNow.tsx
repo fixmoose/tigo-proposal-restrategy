@@ -14,7 +14,7 @@ import { energyPriceData } from "@/data/europe";
 
 export default function WhyNow() {
   return (
-    <section id="section-11" className="section-snap flex items-center justify-center px-8">
+    <section id="section-99" className="section-snap flex items-center justify-center px-8">
       <div className="max-w-6xl w-full">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

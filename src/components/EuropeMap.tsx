@@ -53,7 +53,7 @@ export default function EuropeMap() {
   const [selected, setSelected] = useState<string | null>(null);
 
   return (
-    <section id="section-6" className="section-snap flex items-center justify-center px-8">
+    <section id="section-7" className="section-snap flex items-center justify-center px-8">
       <div className="max-w-6xl w-full">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

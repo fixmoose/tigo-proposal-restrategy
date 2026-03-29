@@ -20,7 +20,7 @@ const problems = [
       </svg>
     ),
     title: "Italy-Centric Support, EU-Wide Problem",
-    description: "Tigo's EU hub in Italy handles operations and offers fair/expo participation — but support is concentrated there. Outside Italy, markets stall. The only lead generation is forwarding inbound emails to whichever distributor is nearby — not even a proper territorial match. Distributors outside Italy get no structured co-marketing, no local training, no systematic lead flow. Why not just territorialize the market?",
+    description: "Tigo\u2019s EU hub in Italy handles operations and offers fair/expo participation \u2014 but support is concentrated there. Outside Italy, markets stall. The only lead generation is forwarding inbound emails to whichever distributor is nearby \u2014 not even a proper territorial match. Distributors outside Italy get no structured co-marketing, no local training, no systematic lead flow. Why not just territorialize the market?",
     highlight: true,
   },
   {
@@ -30,7 +30,7 @@ const problems = [
       </svg>
     ),
     title: "Multi-Brand Distributors",
-    description: "Current distributors carry competing brands. Tigo is one of many on their shelf — not the priority. They push whatever earns the highest margin that week.",
+    description: "Current distributors carry competing brands. Tigo is one of many on their shelf \u2014 not the priority. They push whatever earns the highest margin that week.",
     highlight: false,
   },
   {
@@ -64,19 +64,19 @@ export default function TheProblem() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="text-center mb-10"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             The <span className="text-teal">Problem</span>
           </h2>
           <p className="text-slate text-lg max-w-3xl mx-auto">
-            Sales today are stalling — not because the product is wrong, but because there is no
-            engine driving new customer acquisition at the homeowner and installer level
+            The data suggests sales are stalling not because the product is wrong, but because there
+            is no engine driving new customer acquisition at the homeowner and installer level
           </p>
         </motion.div>
 
-        {/* Top two highlighted cards — sales-critical issues */}
-        <div className="grid md:grid-cols-2 gap-6 mb-6">
+        {/* Top two highlighted cards */}
+        <div className="grid md:grid-cols-2 gap-5 mb-5">
           {problems.filter((p) => p.highlight).map((problem, i) => (
             <motion.div
               key={`highlight-${i}`}
@@ -84,17 +84,17 @@ export default function TheProblem() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.15 }}
-              className="bg-red-500/5 border border-red-500/20 rounded-2xl p-7 hover:border-red-500/30 transition-colors"
+              className="bg-red-500/5 border border-red-500/20 rounded-2xl p-6 hover:border-red-500/30 transition-colors"
             >
-              <div className="text-red-400 mb-4">{problem.icon}</div>
-              <h3 className="text-lg font-semibold mb-2 text-red-400">{problem.title}</h3>
+              <div className="text-red-400 mb-3">{problem.icon}</div>
+              <h3 className="text-base font-semibold mb-2 text-red-400">{problem.title}</h3>
               <p className="text-slate text-sm leading-relaxed">{problem.description}</p>
             </motion.div>
           ))}
         </div>
 
-        {/* Bottom three structural cards */}
-        <div className="grid md:grid-cols-3 gap-5">
+        {/* Three structural cards */}
+        <div className="grid md:grid-cols-3 gap-4 mb-5">
           {problems.filter((p) => !p.highlight).map((problem, i) => (
             <motion.div
               key={`struct-${i}`}
@@ -102,26 +102,93 @@ export default function TheProblem() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 + i * 0.12 }}
-              className="bg-navy-light/50 border border-white/5 rounded-2xl p-6 hover:border-teal/20 transition-colors"
+              className="bg-navy-light/50 border border-white/5 rounded-2xl p-5 hover:border-teal/20 transition-colors"
             >
-              <div className="text-teal mb-4">{problem.icon}</div>
-              <h3 className="text-base font-semibold mb-2">{problem.title}</h3>
-              <p className="text-slate text-sm leading-relaxed">{problem.description}</p>
+              <div className="text-teal mb-3">{problem.icon}</div>
+              <h3 className="text-sm font-semibold mb-2">{problem.title}</h3>
+              <p className="text-slate text-xs leading-relaxed">{problem.description}</p>
             </motion.div>
           ))}
         </div>
 
-        {/* Bottom line */}
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+        {/* Buying Cartel callout */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          className="bg-red-500/5 border border-red-500/20 rounded-2xl p-6 mb-5"
+        >
+          <div className="flex flex-col lg:flex-row gap-6">
+            <div className="flex-1">
+              <h3 className="text-base font-semibold text-red-400 mb-2">Distributors Are Gaming the System</h3>
+              <p className="text-slate text-sm leading-relaxed mb-3">
+                Tigo&apos;s volume-based discount tiers were designed to reward large, committed buyers.
+                In practice, smaller distributors across Europe have discovered they can combine purchase
+                orders &mdash; pooling volume across companies to hit higher discount tiers together.
+              </p>
+              <div className="space-y-1.5 text-sm text-slate">
+                <p>&bull; Tigo gives away margin intended for its largest, most committed partners</p>
+                <p>&bull; Small distributors get top-tier pricing without top-tier commitment</p>
+                <p>&bull; The discount structure builds informal purchasing coalitions with zero loyalty</p>
+                <p>&bull; These same distributors then compete against each other using Tigo&apos;s own margin as the weapon</p>
+              </div>
+              <p className="text-red-400 text-sm font-medium mt-3">
+                This is not a hypothetical risk. It is happening now. Flat pricing eliminates this entirely.
+              </p>
+            </div>
+            {/* Cartel diagram */}
+            <div className="lg:w-64 flex-shrink-0">
+              <svg viewBox="0 0 240 180" className="w-full">
+                {[
+                  { x: 20, y: 10, label: "DE" },
+                  { x: 140, y: 10, label: "PL" },
+                  { x: 20, y: 60, label: "CZ" },
+                  { x: 140, y: 60, label: "RO" },
+                ].map((d, i) => (
+                  <g key={i}>
+                    <rect x={d.x} y={d.y} width={80} height={32} rx={6} fill="#1E2761" stroke="#EF4444" strokeOpacity={0.3} />
+                    <text x={d.x + 40} y={d.y + 20} textAnchor="middle" fill="#94A3B8" fontSize="11" fontWeight="600">{d.label}</text>
+                    <line x1={d.x + 40} y1={d.y + 32} x2={120} y2={115} stroke="#EF4444" strokeOpacity={0.3} strokeWidth={1} />
+                  </g>
+                ))}
+                <rect x={60} y={102} width={120} height={30} rx={6} fill="#EF4444" fillOpacity={0.1} stroke="#EF4444" strokeOpacity={0.4} />
+                <text x={120} y={121} textAnchor="middle" fill="#EF4444" fontSize="10" fontWeight="600">Pooled Order</text>
+                <line x1={120} y1={132} x2={120} y2={150} stroke="#EF4444" strokeOpacity={0.4} strokeWidth={1} />
+                <text x={120} y={163} textAnchor="middle" fill="#EF4444" fontSize="9" fontWeight="600">Tier 3 Discount</text>
+                <text x={120} y={176} textAnchor="middle" fill="#94A3B8" fontSize="7">Tigo loses margin. Nobody gains loyalty.</text>
+              </svg>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Distributor incentive reality */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="text-center text-slate/60 text-sm mt-8 max-w-2xl mx-auto"
+          className="bg-navy-light/50 border border-white/10 rounded-xl p-5"
         >
-          The result: Tigo makes great products but has no systematic way to get them into the hands
-          of the people who install them — or the homeowners who buy them.
-        </motion.p>
+          <p className="text-xs font-semibold text-white/60 uppercase tracking-wider mb-3">What does a distributor in Slovenia or Croatia currently receive for:</p>
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-3 mb-3">
+            {[
+              "Answering support calls",
+              "Resolving complaints",
+              "Submitting product feedback",
+              "Training local installers",
+              "Generating leads & closing sales",
+            ].map((item, i) => (
+              <div key={i} className="text-center">
+                <p className="text-slate text-xs mb-1">{item}</p>
+                <p className="text-red-400 text-sm font-bold">{i === 4 ? "Lowest tier pricing" : "Nothing"}</p>
+              </div>
+            ))}
+          </div>
+          <p className="text-slate/60 text-xs text-center italic">
+            This is not a distribution network. It is a list of companies that happen to sell Tigo.
+          </p>
+        </motion.div>
       </div>
     </section>
   );

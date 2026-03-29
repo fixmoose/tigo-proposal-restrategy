@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function TheSolution() {
   return (
-    <section id="section-3" className="section-snap flex items-center justify-center px-8">
+    <section id="section-4" className="section-snap flex items-center justify-center px-8">
       <div className="max-w-6xl w-full">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -99,6 +99,10 @@ export default function TheSolution() {
               <div className="flex items-start gap-3">
                 <span className="text-teal mt-1">✓</span>
                 <p className="text-slate text-sm">Dedicated Tigo partners — full mindshare, not divided loyalty</p>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="text-teal mt-1">✓</span>
+                <p className="text-slate text-sm">Eliminates purchasing coalitions — no discount tier to game, no incentive to pool orders, no artificial volume spikes</p>
               </div>
             </div>
           </motion.div>

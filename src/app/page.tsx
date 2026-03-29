@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 import PasswordGate from "@/components/PasswordGate";
 import TitleSlide from "@/components/TitleSlide";
 import TheProblem from "@/components/TheProblem";
+import ItalyHub from "@/components/ItalyHub";
 import TheSolution from "@/components/TheSolution";
 import Qualification from "@/components/Qualification";
 import Objections from "@/components/Objections";
@@ -30,20 +31,22 @@ export default function Home() {
         <FinancialData />
         {/* Section 2 — The Problem */}
         <TheProblem />
-        {/* Section 3–8 — Pillar 1: EU Distribution */}
+        {/* Section 3 — Italy Hub Problem */}
+        <ItalyHub />
+        {/* Section 4–9 — Pillar 1: EU Distribution */}
         <TheSolution />
         <MarginCalculator />
         <Qualification />
         <EuropeMap />
         <Objections />
         <ProofOfConcept />
-        {/* Section 9 — Pillar 2: Platform */}
+        {/* Section 10 — Pillar 2: Platform */}
         <DistributorPlatform />
-        {/* Section 10 — Pillar 3: EPC */}
+        {/* Section 11 — Pillar 3: EPC */}
         <EPC />
-        {/* Section 11 — Why All Three */}
+        {/* Section 12 — Why All Three */}
         <WhyAllThree />
-        {/* Section 12 — Personal Note */}
+        {/* Section 13 — Personal Note */}
         <PersonalNote />
       </main>
     </PasswordGate>

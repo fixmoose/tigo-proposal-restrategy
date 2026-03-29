@@ -10,7 +10,7 @@ const stages = [
 
 export default function EPC() {
   return (
-    <section id="section-10" className="section-snap flex items-center justify-center px-8">
+    <section id="section-11" className="section-snap flex items-center justify-center px-8">
       <div className="max-w-4xl w-full">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
