@@ -13,6 +13,9 @@ export default function TheSolution() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
+          <div className="inline-block mb-3 px-3 py-1 bg-teal/10 border border-teal/20 rounded-full text-teal text-xs font-semibold tracking-widest uppercase">
+            Pillar 1 · Distribution
+          </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             The <span className="text-teal">Solution</span>
           </h2>

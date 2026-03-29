@@ -2,12 +2,14 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { sectionNames } from "@/data/europe";
+import { sections, pillarColors, sectionNames } from "@/data/europe";
 
 export default function Navigation() {
   const [current, setCurrent] = useState(0);
   const [showNav, setShowNav] = useState(false);
-  const total = sectionNames.length;
+  const total = sections.length;
+
+  const currentPillarColor = pillarColors[sections[current]?.pillar ?? "intro"];
 
   const scrollToSection = useCallback((index: number) => {
     const el = document.getElementById(`section-${index}`);
@@ -59,36 +61,44 @@ export default function Navigation() {
 
   return (
     <>
-      {/* Progress bar */}
+      {/* Progress bar with pillar color */}
       <div className="fixed top-0 left-0 right-0 z-50 no-print">
         <div className="h-1 bg-navy-dark">
           <motion.div
-            className="h-full bg-teal"
+            className="h-full"
+            style={{ backgroundColor: currentPillarColor }}
             animate={{ width: `${((current + 1) / total) * 100}%` }}
             transition={{ duration: 0.3 }}
           />
         </div>
       </div>
 
-      {/* Side dots */}
-      <div className="fixed right-4 top-1/2 -translate-y-1/2 z-50 no-print hidden md:flex flex-col gap-2">
-        {sectionNames.map((name, i) => (
-          <button
-            key={i}
-            onClick={() => scrollToSection(i)}
-            className="group flex items-center gap-2 justify-end"
-            title={name}
-          >
-            <span className="text-xs text-slate opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-              {name}
-            </span>
-            <div
-              className={`w-2.5 h-2.5 rounded-full transition-all ${
-                i === current ? "bg-teal scale-125" : "bg-white/20 hover:bg-white/40"
-              }`}
-            />
-          </button>
-        ))}
+      {/* Side dots with pillar colors */}
+      <div className="fixed right-4 top-1/2 -translate-y-1/2 z-50 no-print hidden md:flex flex-col gap-1.5">
+        {sections.map((sec, i) => {
+          const color = pillarColors[sec.pillar];
+          const isActive = i === current;
+          return (
+            <button
+              key={i}
+              onClick={() => scrollToSection(i)}
+              className="group flex items-center gap-2 justify-end"
+              title={sec.name}
+            >
+              <span className="text-xs text-slate opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                {sec.name}
+              </span>
+              <div
+                className="rounded-full transition-all"
+                style={{
+                  width: isActive ? 12 : 8,
+                  height: isActive ? 12 : 8,
+                  backgroundColor: isActive ? color : "rgba(255,255,255,0.15)",
+                }}
+              />
+            </button>
+          );
+        })}
       </div>
 
       {/* Bottom bar */}
@@ -97,6 +107,10 @@ export default function Navigation() {
           onClick={() => setShowNav(!showNav)}
           className="bg-navy-light/80 backdrop-blur border border-white/10 rounded-full px-4 py-2 text-xs text-slate hover:text-white transition-colors"
         >
+          <span
+            className="inline-block w-2 h-2 rounded-full mr-2"
+            style={{ backgroundColor: currentPillarColor }}
+          />
           {current + 1} / {total} · {sectionNames[current]}
         </button>
         <AnimatePresence>
@@ -105,22 +119,31 @@ export default function Navigation() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 10 }}
-              className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 bg-navy-light/90 backdrop-blur border border-white/10 rounded-xl p-2 min-w-[200px]"
+              className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 bg-navy-light/90 backdrop-blur border border-white/10 rounded-xl p-2 min-w-[220px] max-h-[70vh] overflow-y-auto"
             >
-              {sectionNames.map((name, i) => (
-                <button
-                  key={i}
-                  onClick={() => {
-                    scrollToSection(i);
-                    setShowNav(false);
-                  }}
-                  className={`block w-full text-left px-3 py-1.5 rounded text-xs transition-colors ${
-                    i === current ? "text-teal bg-teal/10" : "text-slate hover:text-white"
-                  }`}
-                >
-                  {i + 1}. {name}
-                </button>
-              ))}
+              {sections.map((sec, i) => {
+                const color = pillarColors[sec.pillar];
+                return (
+                  <button
+                    key={i}
+                    onClick={() => {
+                      scrollToSection(i);
+                      setShowNav(false);
+                    }}
+                    className={`flex items-center gap-2 w-full text-left px-3 py-1.5 rounded text-xs transition-colors ${
+                      i === current ? "bg-white/5" : "text-slate hover:text-white"
+                    }`}
+                  >
+                    <span
+                      className="w-1.5 h-1.5 rounded-full flex-shrink-0"
+                      style={{ backgroundColor: color }}
+                    />
+                    <span style={{ color: i === current ? color : undefined }}>
+                      {sec.name}
+                    </span>
+                  </button>
+                );
+              })}
             </motion.div>
           )}
         </AnimatePresence>

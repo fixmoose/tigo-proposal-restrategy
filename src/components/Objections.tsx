@@ -8,7 +8,7 @@ export default function Objections() {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section id="section-6" className="section-snap flex items-center justify-center px-8">
+    <section id="section-7" className="section-snap flex items-center justify-center px-8">
       <div className="max-w-4xl w-full">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -17,6 +17,9 @@ export default function Objections() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
+          <div className="inline-block mb-3 px-3 py-1 bg-teal/10 border border-teal/20 rounded-full text-teal text-xs font-semibold tracking-widest uppercase">
+            Pillar 1 · Distribution
+          </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Objections <span className="text-teal">& Answers</span>
           </h2>

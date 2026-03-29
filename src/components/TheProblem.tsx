@@ -34,7 +34,7 @@ const problems = [
 
 export default function TheProblem() {
   return (
-    <section id="section-1" className="section-snap flex items-center justify-center px-8">
+    <section id="section-2" className="section-snap flex items-center justify-center px-8">
       <div className="max-w-6xl w-full">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

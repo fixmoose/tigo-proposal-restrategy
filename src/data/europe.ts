@@ -74,14 +74,47 @@ export const objections = [
   },
 ];
 
-export const sectionNames = [
-  "Title",
-  "The Problem",
-  "Margin Calculator",
-  "The Solution",
-  "Qualification",
-  "Europe Map",
-  "Objections",
-  "Why Now",
-  "Slovenia & Croatia",
+export const tigoQuarterlyData = [
+  { period: "Q1 2023", revenue: 50.1, grossMargin: 36.7 },
+  { period: "Q2 2023", revenue: 46.1, grossMargin: 35.2 },
+  { period: "Q3 2023", revenue: 39.8, grossMargin: 35.6 },
+  { period: "Q4 2023", revenue: 9.3,  grossMargin: 18.0 },
+  { period: "Q1 2024", revenue: 9.8,  grossMargin: 28.2 },
+  { period: "Q2 2024", revenue: 12.7, grossMargin: 22.9 },
+  { period: "Q3 2024", revenue: 14.2, grossMargin: 12.5 },
+  { period: "Q4 2024", revenue: 17.3, grossMargin: -7.7 },
+  { period: "FY 2025", revenue: 103.5, grossMargin: 42.9 },
 ];
+
+export type PillarId = "intro" | "pillar1" | "pillar2" | "pillar3" | "closing";
+
+export interface SectionInfo {
+  name: string;
+  pillar: PillarId;
+}
+
+export const pillarColors: Record<PillarId, string> = {
+  intro: "#94A3B8",
+  pillar1: "#0D7377",
+  pillar2: "#3B82F6",
+  pillar3: "#F5A623",
+  closing: "#94A3B8",
+};
+
+export const sections: SectionInfo[] = [
+  { name: "Title", pillar: "intro" },
+  { name: "Tigo Today", pillar: "intro" },
+  { name: "The Problem", pillar: "intro" },
+  { name: "The Solution", pillar: "pillar1" },
+  { name: "Margin Calculator", pillar: "pillar1" },
+  { name: "Qualification", pillar: "pillar1" },
+  { name: "Europe Map", pillar: "pillar1" },
+  { name: "Objections", pillar: "pillar1" },
+  { name: "Proof of Concept", pillar: "pillar1" },
+  { name: "Platform & API", pillar: "pillar2" },
+  { name: "EPC", pillar: "pillar3" },
+  { name: "Why All Three", pillar: "closing" },
+  { name: "Slovenia & Croatia", pillar: "closing" },
+];
+
+export const sectionNames = sections.map((s) => s.name);

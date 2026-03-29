@@ -53,7 +53,7 @@ export default function EuropeMap() {
   const [selected, setSelected] = useState<string | null>(null);
 
   return (
-    <section id="section-5" className="section-snap flex items-center justify-center px-8">
+    <section id="section-6" className="section-snap flex items-center justify-center px-8">
       <div className="max-w-6xl w-full">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -62,6 +62,9 @@ export default function EuropeMap() {
           transition={{ duration: 0.6 }}
           className="text-center mb-8"
         >
+          <div className="inline-block mb-3 px-3 py-1 bg-teal/10 border border-teal/20 rounded-full text-teal text-xs font-semibold tracking-widest uppercase">
+            Pillar 1 · Distribution
+          </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Europe <span className="text-teal">Territory Map</span>
           </h2>
