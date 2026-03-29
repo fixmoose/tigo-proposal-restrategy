@@ -4,9 +4,9 @@
   --color-navy: #1E2761;
   --color-navy-light: #2A3575;
   --color-navy-dark: #151D4A;
-  --color-teal: #0D7377;
-  --color-teal-light: #10918A;
-  --color-teal-dark: #095B5E;
+  --color-teal: #2DD4BF;
+  --color-teal-light: #5EEAD4;
+  --color-teal-dark: #14B8A6;
   --color-gold: #D4A843;
   --color-slate: #94A3B8;
   --color-green-map: #22C55E;
@@ -75,15 +75,15 @@ input[type="range"]::-webkit-slider-thumb {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: #0D7377;
+  background: #2DD4BF;
   cursor: pointer;
-  border: 2px solid #10918A;
+  border: 2px solid #5EEAD4;
 }
 input[type="range"]::-moz-range-thumb {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: #0D7377;
+  background: #2DD4BF;
   cursor: pointer;
-  border: 2px solid #10918A;
+  border: 2px solid #5EEAD4;
 }

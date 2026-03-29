@@ -30,16 +30,26 @@ export default function PersonalNote() {
           className="bg-gradient-to-br from-teal/10 to-navy-light/50 border border-teal/20 rounded-2xl p-8 mb-8"
         >
           <h3 className="text-2xl font-semibold mb-4">Initra Energija</h3>
-          <p className="text-slate leading-relaxed mb-4">
+          <p className="text-slate text-lg leading-relaxed mb-4">
             A company built from the ground up to be exactly what this proposal describes:
             a dedicated, Tigo-only distribution partner. Based in Slovenia with operations
-            across Croatia, Serbia, and Bosnia &amp; Herzegovina.
+            across Croatia.
           </p>
-          <p className="text-slate leading-relaxed">
+          <p className="text-slate text-lg leading-relaxed mb-4">
             Not a multi-brand wholesaler adding Tigo to the shelf.
             Not a generalist testing the waters. A purpose-built vehicle for Tigo distribution
-            in the Adriatic and Western Balkans region.
+            in Slovenia and Croatia.
           </p>
+          <div className="bg-teal/5 border border-teal/15 rounded-xl p-4">
+            <p className="text-sm font-medium text-teal mb-1">Proof It Works</p>
+            <p className="text-slate text-sm leading-relaxed">
+              Initra launched <span className="text-white font-semibold">tigoenergy.xx e-commerce shops</span> as
+              a 2-week experiment with minimal investment — and sold{" "}
+              <span className="text-white font-semibold">3 inverters and multiple MLPE units directly to end customers within a week</span>.
+              No marketing budget, no ad spend, no distributor support. This is the hidden demand that
+              a structured end-customer acquisition strategy would unlock at scale.
+            </p>
+          </div>
         </motion.div>
 
         {/* Three asks */}
@@ -56,7 +66,7 @@ export default function PersonalNote() {
               {
                 num: "01",
                 title: "Territory Rights",
-                desc: "Exclusive distribution rights for Slovenia, Croatia, Serbia, and Bosnia & Herzegovina.",
+                desc: "Exclusive distribution rights for Slovenia and Croatia. Serbia and Bosnia & Herzegovina would require a separate outside-EU distributor with local on-the-ground support.",
               },
               {
                 num: "02",
@@ -79,7 +89,7 @@ export default function PersonalNote() {
               >
                 <div className="text-teal text-3xl font-bold mb-3 opacity-40">{ask.num}</div>
                 <h4 className="font-semibold mb-2">{ask.title}</h4>
-                <p className="text-slate text-sm leading-relaxed">{ask.desc}</p>
+                <p className="text-slate text-base leading-relaxed">{ask.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -96,7 +106,7 @@ export default function PersonalNote() {
           <div className="text-gold text-sm font-semibold uppercase tracking-wider mb-2">
             A Gift of Good Faith
           </div>
-          <p className="text-slate leading-relaxed">
+          <p className="text-slate text-base leading-relaxed">
             We have secured <span className="text-white font-semibold">17 Tigo-related domains</span> across
             European country TLDs. These are offered to Tigo Energy as a gift — no strings attached —
             as a demonstration of our long-term commitment to the brand.

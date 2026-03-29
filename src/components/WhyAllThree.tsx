@@ -6,7 +6,7 @@ const pillars = [
   {
     num: "1",
     title: "Distribution\nRestructuring",
-    color: "#0D7377",
+    color: "#2DD4BF",
     borderColor: "border-teal/30",
     bgColor: "bg-teal/10",
     textColor: "text-teal",
@@ -62,7 +62,7 @@ export default function WhyAllThree() {
           {/* Top label — what they support */}
           <div className="text-center mb-8">
             <div className="inline-block bg-white/5 border border-white/10 rounded-xl px-8 py-4">
-              <p className="text-xs text-slate uppercase tracking-widest mb-1">The Vision</p>
+              <p className="text-sm text-slate uppercase tracking-widest mb-1">The Vision</p>
               <p className="text-xl font-bold">
                 Tigo as a Complete <span className="text-teal">Solar Energy Platform</span>
               </p>
@@ -93,7 +93,7 @@ export default function WhyAllThree() {
                 <h3 className={`text-lg font-semibold ${p.textColor} mb-3 whitespace-pre-line leading-tight`}>
                   {p.title}
                 </h3>
-                <p className="text-slate text-sm leading-relaxed">{p.desc}</p>
+                <p className="text-slate text-base leading-relaxed">{p.desc}</p>
               </motion.div>
             ))}
           </div>

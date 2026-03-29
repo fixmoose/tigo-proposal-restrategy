@@ -13,13 +13,13 @@ export default function Qualification() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <div className="inline-block mb-3 px-3 py-1 bg-teal/10 border border-teal/20 rounded-full text-teal text-xs font-semibold tracking-widest uppercase">
+          <div className="inline-block mb-3 px-3 py-1 bg-teal/10 border border-teal/20 rounded-full text-teal text-sm font-semibold tracking-wider uppercase">
             Pillar 1 · Distribution
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Distributor <span className="text-teal">Qualification</span>
           </h2>
-          <p className="text-slate text-lg max-w-2xl mx-auto">
+          <p className="text-slate text-xl max-w-2xl mx-auto">
             Tigo-only requirement — the Porsche model for solar distribution
           </p>
         </motion.div>
@@ -60,13 +60,13 @@ export default function Qualification() {
             <h3 className="text-xl font-semibold mb-4">
               Standalone Tigo-Only Distributor
             </h3>
-            <p className="text-slate text-sm leading-relaxed mb-4">
+            <p className="text-slate text-base leading-relaxed mb-4">
               Markets like Austria, Belgium, Nordics, CEE — appoint a dedicated company
               that sells exclusively Tigo products. Full alignment, zero competing interests.
             </p>
             <div className="flex flex-wrap gap-2">
               {["AT", "BE", "CH", "CZ", "DK", "FI", "NO", "SE", "PL", "PT", "SI", "HR"].map((c) => (
-                <span key={c} className="px-2.5 py-1 bg-teal/10 text-teal text-xs rounded-full border border-teal/20">
+                <span key={c} className="px-2.5 py-1 bg-teal/10 text-teal text-sm rounded-full border border-teal/20">
                   {c}
                 </span>
               ))}
@@ -86,14 +86,14 @@ export default function Qualification() {
             <h3 className="text-xl font-semibold mb-4">
               Dedicated Tigo Department or Subsidiary
             </h3>
-            <p className="text-slate text-sm leading-relaxed mb-4">
+            <p className="text-slate text-base leading-relaxed mb-4">
               Markets like Germany, France, Italy — partner with an existing company that creates
               a dedicated Tigo division, or establish a new subsidiary. Operationally separate,
               fully committed.
             </p>
             <div className="flex flex-wrap gap-2">
               {["DE", "FR", "IT", "ES", "GB", "NL"].map((c) => (
-                <span key={c} className="px-2.5 py-1 bg-gold/10 text-gold text-xs rounded-full border border-gold/20">
+                <span key={c} className="px-2.5 py-1 bg-gold/10 text-gold text-sm rounded-full border border-gold/20">
                   {c}
                 </span>
               ))}
@@ -124,7 +124,7 @@ export default function Qualification() {
             ].map((step, i) => (
               <div key={i} className="flex flex-col items-center relative z-10">
                 <div
-                  className={`w-8 h-8 rounded-full border-2 flex items-center justify-center text-xs font-bold ${
+                  className={`w-8 h-8 rounded-full border-2 flex items-center justify-center text-sm font-bold ${
                     step.active
                       ? "bg-teal border-teal text-white"
                       : "bg-navy border-navy-light text-slate"
@@ -132,8 +132,8 @@ export default function Qualification() {
                 >
                   {i + 1}
                 </div>
-                <p className="text-xs text-teal font-medium mt-2">{step.label}</p>
-                <p className="text-xs text-slate text-center mt-1 max-w-[100px]">{step.desc}</p>
+                <p className="text-sm text-teal font-medium mt-2">{step.label}</p>
+                <p className="text-sm text-slate text-center mt-1 max-w-[100px]">{step.desc}</p>
               </div>
             ))}
           </div>

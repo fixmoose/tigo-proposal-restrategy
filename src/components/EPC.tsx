@@ -19,13 +19,13 @@ export default function EPC() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <div className="inline-block mb-3 px-3 py-1 bg-amber-500/10 border border-amber-500/20 rounded-full text-amber-400 text-xs font-semibold tracking-widest uppercase">
+          <div className="inline-block mb-3 px-3 py-1 bg-amber-500/10 border border-amber-500/20 rounded-full text-amber-400 text-sm font-semibold tracking-wider uppercase">
             Pillar 3 · EPC
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             From Supplier to <span className="text-amber-400">Developer</span>
           </h2>
-          <p className="text-slate text-lg max-w-2xl mx-auto">
+          <p className="text-slate text-xl max-w-2xl mx-auto">
             An opportunity worth exploring
           </p>
         </motion.div>
@@ -67,7 +67,7 @@ export default function EPC() {
                   <p className={`text-sm font-semibold mb-1 ${stage.active ? "text-teal" : "text-amber-400"}`}>
                     {stage.label}
                   </p>
-                  <p className="text-slate text-xs">{stage.desc}</p>
+                  <p className="text-slate text-sm">{stage.desc}</p>
                   {stage.active && (
                     <div className="absolute -top-2 left-1/2 -translate-x-1/2 px-2 py-0.5 bg-teal text-white text-[10px] font-bold rounded-full">
                       TODAY
@@ -94,8 +94,8 @@ export default function EPC() {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="bg-amber-500/5 border border-amber-500/15 rounded-xl p-5"
           >
-            <h3 className="text-sm font-semibold text-amber-400 mb-2">US Commercial / Utility</h3>
-            <p className="text-slate text-xs leading-relaxed">
+            <h3 className="text-base font-semibold text-amber-400 mb-2">US Commercial / Utility</h3>
+            <p className="text-slate text-base leading-relaxed">
               Tigo has brand recognition, MLPE technology, and existing installer relationships.
               An in-house EPC division could compete for commercial and utility-scale contracts
               directly, using Tigo product throughout.
@@ -109,8 +109,8 @@ export default function EPC() {
             transition={{ duration: 0.5, delay: 0.45 }}
             className="bg-amber-500/5 border border-amber-500/15 rounded-xl p-5"
           >
-            <h3 className="text-sm font-semibold text-amber-400 mb-2">EU Large-Scale PV</h3>
-            <p className="text-slate text-xs leading-relaxed">
+            <h3 className="text-base font-semibold text-amber-400 mb-2">EU Large-Scale PV</h3>
+            <p className="text-slate text-base leading-relaxed">
               A European EPC partnership model — using committed local distributors as on-the-ground
               partners — captures commercial, agricultural, and community solar markets without Tigo
               building its own EU field teams.

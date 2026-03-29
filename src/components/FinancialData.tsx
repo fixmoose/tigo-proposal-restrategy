@@ -43,7 +43,7 @@ export default function FinancialData() {
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Where Tigo Is <span className="text-teal">Today</span>
           </h2>
-          <p className="text-slate text-lg max-w-2xl mx-auto">
+          <p className="text-slate text-xl max-w-2xl mx-auto">
             TYGO public financial data tells the story — and points to the fix
           </p>
         </motion.div>
@@ -127,8 +127,8 @@ export default function FinancialData() {
                       entry.period.includes("2024") || entry.period === "Q4 2023"
                         ? "#4B5563"
                         : entry.period === "FY 2025"
-                          ? "#0D7377"
-                          : "#10918A"
+                          ? "#2DD4BF"
+                          : "#14B8A6"
                     }
                     fillOpacity={0.8}
                   />
@@ -163,7 +163,7 @@ export default function FinancialData() {
         </motion.div>
 
         {/* Source */}
-        <p className="text-slate/40 text-xs text-center mb-8">
+        <p className="text-slate/40 text-sm text-center mb-8">
           Source: TYGO SEC filings, public earnings releases
         </p>
 
@@ -178,7 +178,7 @@ export default function FinancialData() {
           >
             <div className="flex items-center gap-2 mb-2">
               <div className="w-3 h-3 rounded-full bg-green-500" />
-              <span className="text-green-400 text-sm font-semibold">Q1 2023 — Peak</span>
+              <span className="text-green-400 text-base font-semibold">Q1 2023 — Peak</span>
             </div>
             <p className="text-slate text-sm leading-relaxed">
               Peak margin <span className="text-white font-medium">36.7%</span> when distribution was working.
@@ -195,11 +195,11 @@ export default function FinancialData() {
           >
             <div className="flex items-center gap-2 mb-2">
               <div className="w-3 h-3 rounded-full bg-red-500" />
-              <span className="text-red-400 text-sm font-semibold">FY 2024 — Collapse</span>
+              <span className="text-red-400 text-base font-semibold">FY 2024 — Collapse</span>
             </div>
             <p className="text-slate text-sm leading-relaxed">
               <span className="text-white font-medium">$23.5M inventory write-off</span> from excess
-              slow-moving residential storage product (GO batteries/inverters). Optimizer margin
+              slow-moving residential storage product (EI battery system). Optimizer margin
               remained healthy — this was a distribution and inventory management problem, not a product problem.
             </p>
           </motion.div>
@@ -213,7 +213,7 @@ export default function FinancialData() {
           >
             <div className="flex items-center gap-2 mb-2">
               <div className="w-3 h-3 rounded-full bg-teal" />
-              <span className="text-teal text-sm font-semibold">FY 2025 — Recovery</span>
+              <span className="text-teal text-base font-semibold">FY 2025 — Recovery</span>
             </div>
             <p className="text-slate text-sm leading-relaxed">
               Revenue <span className="text-white font-medium">+92%</span>, gross profit
@@ -231,12 +231,26 @@ export default function FinancialData() {
           >
             <div className="flex items-center gap-2 mb-2">
               <div className="w-3 h-3 rounded-full bg-amber-500" />
-              <span className="text-amber-400 text-sm font-semibold">Q1 2025 — Warning Signal</span>
+              <span className="text-amber-400 text-base font-semibold">Q1 2025 — Warning Signal</span>
             </div>
-            <p className="text-slate text-sm leading-relaxed">
+            <p className="text-slate text-sm leading-relaxed mb-3">
               Q1 2025 earnings flagged a <span className="text-white font-medium">slow-paying EU distributor</span> —
               a direct consequence of the volume discount model this proposal addresses.
             </p>
+            <div className="bg-amber-500/5 border border-amber-500/10 rounded-lg p-3 space-y-2 text-sm">
+              <p className="text-slate leading-relaxed">
+                Every <span className="text-white font-medium">30 days</span> a large invoice sits unpaid,
+                Tigo loses <span className="text-amber-400 font-medium">~0.25%</span> in opportunity cost
+                (at a conservative 3% annual return). A <span className="text-white font-medium">$500K</span> overdue
+                invoice = <span className="text-amber-400 font-medium">$1,250/month</span> evaporating — and real
+                receivables are multiples of that.
+              </p>
+              <p className="text-teal leading-relaxed font-medium">
+                Proposed fix: flat pricing with smaller, pre-paid orders from many distributors.
+                No giant receivables, no slow-pay risk, no chasing one whale — cash hits the
+                account before product ships.
+              </p>
+            </div>
           </motion.div>
         </div>
 
@@ -250,9 +264,9 @@ export default function FinancialData() {
         >
           <p className="text-slate text-sm leading-relaxed">
             The FY2024 margin collapse was driven by <span className="text-white font-medium">$23.5M in
-            inventory write-offs</span> on the GO residential storage line — not the MLPE optimizer business,
+            inventory write-offs</span> on the EI residential storage line — not the MLPE optimizer business,
             which has historically maintained <span className="text-white font-medium">35–40% gross margins</span>.
-            A new GO residential unit is currently in launch phase. The optimizer distribution restructuring
+            The new GO battery system is currently in launch phase. The optimizer distribution restructuring
             proposed here protects and grows the profitable core of Tigo&apos;s product portfolio while the
             residential line resets.
           </p>

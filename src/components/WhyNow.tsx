@@ -57,14 +57,14 @@ export default function WhyNow() {
                   />
                   <defs>
                     <linearGradient id="energyGrad" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="5%" stopColor="#0D7377" stopOpacity={0.3} />
-                      <stop offset="95%" stopColor="#0D7377" stopOpacity={0} />
+                      <stop offset="5%" stopColor="#2DD4BF" stopOpacity={0.3} />
+                      <stop offset="95%" stopColor="#2DD4BF" stopOpacity={0} />
                     </linearGradient>
                   </defs>
                   <Area
                     type="monotone"
                     dataKey="price"
-                    stroke="#0D7377"
+                    stroke="#2DD4BF"
                     strokeWidth={2}
                     fill="url(#energyGrad)"
                   />

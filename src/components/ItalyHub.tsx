@@ -20,14 +20,14 @@ export default function ItalyHub() {
           transition={{ duration: 0.6 }}
           className="text-center mb-10"
         >
-          <div className="inline-block mb-3 px-3 py-1 bg-teal/10 border border-teal/20 rounded-full text-teal text-xs font-semibold tracking-widest uppercase">
+          <div className="inline-block mb-3 px-3 py-1 bg-teal/10 border border-teal/20 rounded-full text-teal text-sm font-semibold tracking-wider uppercase">
             Pillar 1 \u00B7 Distribution
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             One Hub Cannot Serve <span className="text-teal">27 Markets</span>
           </h2>
-          <p className="text-slate text-lg max-w-2xl mx-auto">
-            This is not a criticism of the Italian team \u2014 it is a structural problem that cannot be solved by adding more headcount
+          <p className="text-slate text-xl max-w-2xl mx-auto">
+            Italy-centric support, EU-wide problem &mdash; adding employees in Germany or Poland didn&apos;t work either
           </p>
         </motion.div>
 
@@ -44,9 +44,9 @@ export default function ItalyHub() {
               <ellipse cx="200" cy="160" rx="170" ry="140" fill="none" stroke="#2A3575" strokeWidth="1" strokeDasharray="4 4" />
 
               {/* Italy hub - bright */}
-              <circle cx="220" cy="200" r="22" fill="#0D7377" fillOpacity="0.3" stroke="#0D7377" strokeWidth="2" />
-              <text x="220" y="196" textAnchor="middle" fill="#0D7377" fontSize="9" fontWeight="700">ITALY</text>
-              <text x="220" y="207" textAnchor="middle" fill="#0D7377" fontSize="7">EU Hub</text>
+              <circle cx="220" cy="200" r="22" fill="#2DD4BF" fillOpacity="0.3" stroke="#2DD4BF" strokeWidth="2" />
+              <text x="220" y="196" textAnchor="middle" fill="#2DD4BF" fontSize="9" fontWeight="700">ITALY</text>
+              <text x="220" y="207" textAnchor="middle" fill="#2DD4BF" fontSize="7">EU Hub</text>
 
               {/* Rotterdam */}
               <circle cx="195" cy="110" r="10" fill="#3B82F6" fillOpacity="0.2" stroke="#3B82F6" strokeWidth="1.5" />
@@ -70,7 +70,7 @@ export default function ItalyHub() {
                   <line
                     x1="220" y1="200"
                     x2={market.x} y2={market.y}
-                    stroke="#0D7377"
+                    stroke="#2DD4BF"
                     strokeWidth={market.width}
                     opacity={market.opacity}
                     strokeDasharray={market.opacity < 0.3 ? "2 3" : "none"}
@@ -98,11 +98,11 @@ export default function ItalyHub() {
           >
             {/* Supply chain */}
             <div className="flex items-center gap-2 mb-6 text-sm">
-              <span className="px-2.5 py-1 bg-blue-500/10 border border-blue-500/20 rounded text-blue-400 text-xs font-medium">Rotterdam</span>
+              <span className="px-2.5 py-1 bg-blue-500/10 border border-blue-500/20 rounded text-blue-400 text-sm font-medium">Rotterdam</span>
               <span className="text-slate">&rarr;</span>
-              <span className="px-2.5 py-1 bg-teal/10 border border-teal/20 rounded text-teal text-xs font-medium">Italy HQ</span>
+              <span className="px-2.5 py-1 bg-teal/10 border border-teal/20 rounded text-teal text-sm font-medium">Italy HQ</span>
               <span className="text-slate">&rarr;</span>
-              <span className="px-2.5 py-1 bg-white/5 border border-white/10 rounded text-slate text-xs font-medium">EU Distributors</span>
+              <span className="px-2.5 py-1 bg-white/5 border border-white/10 rounded text-slate text-sm font-medium">EU Distributors</span>
             </div>
 
             {/* Support reality in smaller markets */}
@@ -113,15 +113,25 @@ export default function ItalyHub() {
                   <span className={`mt-0.5 text-sm ${i === supportReality.length - 1 ? "text-red-400" : "text-slate/40"}`}>
                     {i === supportReality.length - 1 ? "!" : "\u2022"}
                   </span>
-                  <p className={`text-sm leading-relaxed ${i === supportReality.length - 1 ? "text-red-400 font-medium" : "text-slate"}`}>
+                  <p className={`text-base leading-relaxed ${i === supportReality.length - 1 ? "text-red-400 font-medium" : "text-slate"}`}>
                     {point}
                   </p>
                 </div>
               ))}
             </div>
 
+            <div className="bg-red-500/5 border border-red-500/20 rounded-xl p-4 mb-4">
+              <p className="text-slate text-base leading-relaxed">
+                <span className="text-white font-medium">Extra boots on the ground didn&apos;t help.</span> Tigo
+                hired employees in Germany and Poland &mdash; but employees collect a payroll, not a profit.
+                They have no personal stake in expanding the market, no reason to sacrifice evenings and weekends
+                building relationships with installers. A salaried rep clocks out at 5 pm; a business owner
+                with territory rights never stops selling.
+              </p>
+            </div>
+
             <div className="bg-navy-light/50 border border-white/5 rounded-xl p-4">
-              <p className="text-slate text-xs leading-relaxed">
+              <p className="text-slate text-base leading-relaxed">
                 <span className="text-white font-medium">The structural reality:</span> The Italian team
                 is doing the best it can with a model that was never designed to scale across 27 markets.
                 Companies that have solved this problem &mdash; Victron, Fronius, Bosch &mdash; all

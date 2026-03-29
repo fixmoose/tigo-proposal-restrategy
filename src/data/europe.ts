@@ -33,8 +33,8 @@ export const countryData: Record<string, CountryData> = {
   LT: { name: "Lithuania", distributor: "Unassigned", type: "Small market", status: "unassigned" },
   LV: { name: "Latvia", distributor: "Unassigned", type: "Small market", status: "unassigned" },
   EE: { name: "Estonia", distributor: "Unassigned", type: "Small market", status: "unassigned" },
-  RS: { name: "Serbia", distributor: "Initra Energija (regional)", type: "Small market — standalone Tigo-only", status: "active" },
-  BA: { name: "Bosnia & Herzegovina", distributor: "Initra Energija (regional)", type: "Small market", status: "active" },
+  RS: { name: "Serbia", distributor: "Requires outside-EU distributor", type: "Small market — local support needed", status: "unassigned" },
+  BA: { name: "Bosnia & Herzegovina", distributor: "Requires outside-EU distributor", type: "Small market — local support needed", status: "unassigned" },
 };
 
 export const energyPriceData = [
@@ -66,7 +66,7 @@ export const objections = [
   },
   {
     title: "\"We can't enforce MSRP in the EU — it's illegal.\"",
-    answer: "Correct: a hard MSRP mandate violates EU competition law. This proposal uses a *soft* MSRP — a recommended retail price with a 10% maximum deviation guideline. It's unenforceable by law but enforceable by contract through territory protection and qualification requirements."
+    answer: "Correct: a hard MSRP mandate violates EU competition law (Art. 101 TFEU / Vertical Block Exemption Regulation). This proposal uses a *soft* MSRP with a ±10% band — MSRP +10% for small orders, MSRP −10% for large orders. EU law permits recommended pricing as long as it remains non-binding and distributors retain final pricing discretion. Enforcement is indirect: territory protection and qualification requirements, not price mandates."
   },
   {
     title: "\"Why should we trust a new distributor over established ones?\"",
@@ -95,7 +95,7 @@ export interface SectionInfo {
 
 export const pillarColors: Record<PillarId, string> = {
   intro: "#94A3B8",
-  pillar1: "#0D7377",
+  pillar1: "#2DD4BF",
   pillar2: "#3B82F6",
   pillar3: "#F5A623",
   closing: "#94A3B8",

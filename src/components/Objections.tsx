@@ -17,13 +17,13 @@ export default function Objections() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <div className="inline-block mb-3 px-3 py-1 bg-teal/10 border border-teal/20 rounded-full text-teal text-xs font-semibold tracking-widest uppercase">
+          <div className="inline-block mb-3 px-3 py-1 bg-teal/10 border border-teal/20 rounded-full text-teal text-sm font-semibold tracking-wider uppercase">
             Pillar 1 · Distribution
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Objections <span className="text-teal">& Answers</span>
           </h2>
-          <p className="text-slate text-lg">
+          <p className="text-slate text-xl">
             Click each objection to see the response
           </p>
         </motion.div>
@@ -42,7 +42,7 @@ export default function Objections() {
                 className="w-full text-left bg-navy-light/50 border border-white/5 rounded-xl px-6 py-4 hover:border-teal/20 transition-colors"
               >
                 <div className="flex items-center justify-between gap-4">
-                  <span className="text-sm md:text-base font-medium">{item.title}</span>
+                  <span className="text-base md:text-lg font-medium">{item.title}</span>
                   <motion.span
                     animate={{ rotate: open === i ? 45 : 0 }}
                     className="text-teal text-xl flex-shrink-0"
@@ -61,7 +61,7 @@ export default function Objections() {
                     className="overflow-hidden"
                   >
                     <div className="px-6 py-4 bg-teal/5 border-x border-b border-teal/10 rounded-b-xl">
-                      <p className="text-slate text-sm leading-relaxed">{item.answer}</p>
+                      <p className="text-slate text-base leading-relaxed">{item.answer}</p>
                     </div>
                   </motion.div>
                 )}

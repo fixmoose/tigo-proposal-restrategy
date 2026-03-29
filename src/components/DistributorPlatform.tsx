@@ -58,14 +58,14 @@ export default function DistributorPlatform() {
           transition={{ duration: 0.6 }}
           className="text-center mb-10"
         >
-          <div className="inline-block mb-3 px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-xs font-semibold tracking-widest uppercase">
+          <div className="inline-block mb-3 px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-sm font-semibold tracking-wider uppercase">
             Pillar 2 · Platform
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Distributor <span className="text-blue-400">Platform & API</span>
           </h2>
-          <p className="text-slate text-base max-w-2xl mx-auto">
-            Think: Salesforce + Shopify + GitHub Issues — built specifically for Tigo&apos;s distribution network
+          <p className="text-slate text-lg max-w-2xl mx-auto">
+            Think: Salesforce + React/Next.js portal + GitHub Issues — built specifically for Tigo&apos;s distribution network
           </p>
         </motion.div>
 
@@ -92,13 +92,13 @@ export default function DistributorPlatform() {
                   <g key={i}>
                     <line
                       x1="200" y1="200" x2={x2} y2={y2}
-                      stroke={isOutbound ? "#3B82F6" : "#0D7377"}
+                      stroke={isOutbound ? "#3B82F6" : "#2DD4BF"}
                       strokeWidth="1.5"
                       strokeDasharray={isOutbound ? "none" : "4 2"}
                       opacity="0.4"
                     />
                     {/* Arrow dot at end */}
-                    <circle cx={x2} cy={y2} r="4" fill={isOutbound ? "#3B82F6" : "#0D7377"} opacity="0.6" />
+                    <circle cx={x2} cy={y2} r="4" fill={isOutbound ? "#3B82F6" : "#2DD4BF"} opacity="0.6" />
                   </g>
                 );
               })}
@@ -128,9 +128,9 @@ export default function DistributorPlatform() {
               })}
 
               {/* Center hub */}
-              <circle cx="200" cy="200" r="45" fill="#0D7377" opacity="0.15" />
-              <circle cx="200" cy="200" r="38" fill="#1E2761" stroke="#0D7377" strokeWidth="2" />
-              <text x="200" y="195" textAnchor="middle" dominantBaseline="central" fill="#0D7377" fontSize="12" fontWeight="700">
+              <circle cx="200" cy="200" r="45" fill="#2DD4BF" opacity="0.15" />
+              <circle cx="200" cy="200" r="38" fill="#1E2761" stroke="#2DD4BF" strokeWidth="2" />
+              <text x="200" y="195" textAnchor="middle" dominantBaseline="central" fill="#2DD4BF" fontSize="12" fontWeight="700">
                 TIGO
               </text>
               <text x="200" y="210" textAnchor="middle" dominantBaseline="central" fill="#94A3B8" fontSize="8">
@@ -145,8 +145,8 @@ export default function DistributorPlatform() {
                 <text x="60" y="62" textAnchor="middle" fill="#94A3B8" fontSize="7">Training, Firmware</text>
               </g>
               <g>
-                <rect x="290" y="20" width="100" height="48" rx="6" fill="#0D7377" fillOpacity="0.08" stroke="#0D7377" strokeOpacity="0.2" />
-                <text x="340" y="38" textAnchor="middle" fill="#0D7377" fontSize="8" fontWeight="600">← INBOUND</text>
+                <rect x="290" y="20" width="100" height="48" rx="6" fill="#2DD4BF" fillOpacity="0.08" stroke="#2DD4BF" strokeOpacity="0.2" />
+                <text x="340" y="38" textAnchor="middle" fill="#2DD4BF" fontSize="8" fontWeight="600">← INBOUND</text>
                 <text x="340" y="52" textAnchor="middle" fill="#94A3B8" fontSize="7">Orders, Data</text>
                 <text x="340" y="62" textAnchor="middle" fill="#94A3B8" fontSize="7">Feedback, Intel</text>
               </g>
@@ -168,7 +168,7 @@ export default function DistributorPlatform() {
                   <div className={`w-2 h-2 rounded-full ${f.dot}`} />
                   <h3 className="text-sm font-semibold">{f.title}</h3>
                 </div>
-                <p className="text-slate text-xs leading-relaxed">{f.desc}</p>
+                <p className="text-slate text-base leading-relaxed">{f.desc}</p>
               </motion.div>
             ))}
           </div>

@@ -60,7 +60,7 @@ export default function ProofOfConcept() {
           transition={{ duration: 0.6 }}
           className="text-center mb-8"
         >
-          <div className="inline-block mb-3 px-3 py-1 bg-teal/10 border border-teal/20 rounded-full text-teal text-xs font-semibold tracking-widest uppercase">
+          <div className="inline-block mb-3 px-3 py-1 bg-teal/10 border border-teal/20 rounded-full text-teal text-sm font-semibold tracking-wider uppercase">
             Pillar 1 &middot; Distribution
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -88,29 +88,29 @@ export default function ProofOfConcept() {
                 } transition-colors`}
               >
                 <div className="flex items-center gap-3 mb-2">
-                  <div className={`px-2 py-0.5 rounded text-xs font-bold border ${ex.badge}`}>
+                  <div className={`px-2 py-0.5 rounded text-sm font-bold border ${ex.badge}`}>
                     {ex.company.charAt(0)}
                   </div>
                   <div>
                     <h3 className="font-semibold text-sm">{ex.company}</h3>
-                    <p className="text-slate text-xs">{ex.origin}</p>
+                    <p className="text-slate text-sm">{ex.origin}</p>
                   </div>
                 </div>
-                <p className={`text-xs mb-2 leading-relaxed ${isWarning ? "text-red-300/80" : "text-white/80"}`}>{ex.model}</p>
-                <p className="text-slate text-xs leading-relaxed mb-2">{ex.details}</p>
+                <p className={`text-sm mb-2 leading-relaxed ${isWarning ? "text-red-300/80" : "text-white/80"}`}>{ex.model}</p>
+                <p className="text-slate text-base leading-relaxed mb-2">{ex.details}</p>
                 <div className={`rounded-lg px-3 py-1.5 ${isWarning ? "bg-red-500/5 border border-red-500/10" : "bg-teal/5 border border-teal/10"}`}>
-                  <p className={`text-xs font-medium mb-0.5 ${isWarning ? "text-red-400" : "text-teal"}`}>
+                  <p className={`text-sm font-medium mb-0.5 ${isWarning ? "text-red-400" : "text-teal"}`}>
                     {isWarning ? "Warning" : "Result"}
                   </p>
-                  <p className="text-slate text-xs leading-relaxed">{ex.result}</p>
+                  <p className="text-slate text-base leading-relaxed">{ex.result}</p>
                 </div>
                 {ex.quote && (
-                  <p className="text-xs italic text-slate/70 mt-2">
+                  <p className="text-sm italic text-slate/70 mt-2">
                     &ldquo;{ex.quote}&rdquo;
                   </p>
                 )}
                 {ex.source && (
-                  <p className="text-xs text-slate/40 mt-1">{ex.source}</p>
+                  <p className="text-sm text-slate/40 mt-1">{ex.source}</p>
                 )}
               </motion.div>
             );
@@ -125,8 +125,8 @@ export default function ProofOfConcept() {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="bg-teal/5 border border-teal/20 rounded-xl p-5 text-center"
         >
-          <p className="text-sm font-medium text-white mb-1">Common Thread</p>
-          <p className="text-slate text-sm leading-relaxed max-w-3xl mx-auto">
+          <p className="text-lg font-medium text-white mb-1">Common Thread</p>
+          <p className="text-slate text-base leading-relaxed max-w-3xl mx-auto">
             Territorial exclusivity + brand standards + distributor investment = market dominance.{" "}
             <span className="text-teal font-medium">
               None of these companies compete with their own distributors on price.
@@ -136,7 +136,7 @@ export default function ProofOfConcept() {
 
         {/* Sources */}
         <div className="mt-4 text-center">
-          <p className="text-slate/30 text-xs">
+          <p className="text-slate/30 text-sm">
             Sources: victronenergy.com &middot; vrm.victronenergy.com &middot; fronius.com &middot; kostal-solar-electric.com &middot; SEDG NASDAQ &middot; investors.tigoenergy.com
           </p>
         </div>
